@@ -1,9 +1,9 @@
-class InvoicesController < ApplicationController
+class InvoicesController < ProtectedController
   before_action :set_invoice, only: [:show, :update, :destroy]
 
   # GET /invoices
   def index
-    @invoices = Invoice.all
+    @invoices = current_user.invoices
 
     render json: @invoices
   end
