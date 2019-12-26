@@ -3,7 +3,7 @@ class InvoicesController < ProtectedController
 
   # GET /invoices
   def index
-    @invoices = Invoice.all
+    @invoices = current_user.invoice.all
 
     render json: @invoices
   end
