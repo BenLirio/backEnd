@@ -1,5 +1,5 @@
 class InvoicesController < ProtectedController
-  before_action :set_example, only: %i[update destroy]
+  before_action :set_invoice, only: %i[update destroy]
 
   # GET /invoices
   def index
@@ -15,7 +15,7 @@ class InvoicesController < ProtectedController
 
   # POST /invoices
   def create
-    @invoice = current_user.invoice.build(invoice_params)
+    @invoice = current_user.invoices.build(invoice_params)
 
     if @invoice.save
       render json: @invoice, status: :created, location: @invoice
