@@ -9,7 +9,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Invoice.destroy_all
-Invoice.create(invoice_id: '1', service: 'film', price:'1000')
-Invoice.create(invoice_id: '2', service: 'wedding', price:'1500')
-Invoice.create(invoice_id: '3', service: 'realestate drone', price:'500')
+User.destroy_all
+
+# Invoice.create(invoice_id: '1', service: 'film', price:'1000')
+# Invoice.create(invoice_id: '2', service: 'wedding', price:'1500')
+# Invoice.create(invoice_id: '3', service: 'realestate drone', price:'500')

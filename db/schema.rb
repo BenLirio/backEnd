@@ -27,8 +27,10 @@ ActiveRecord::Schema.define(version: 2019_12_19_210529) do
     t.integer "invoice_id"
     t.string "service"
     t.integer "price"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_invoices_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,4 +44,5 @@ ActiveRecord::Schema.define(version: 2019_12_19_210529) do
   end
 
   add_foreign_key "examples", "users"
+  add_foreign_key "invoices", "users"
 end

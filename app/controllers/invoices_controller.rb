@@ -1,21 +1,21 @@
 class InvoicesController < ProtectedController
-  before_action :set_invoice, only: [:show, :update, :destroy]
+  before_action :set_example, only: %i[update destroy]
 
   # GET /invoices
   def index
-    @invoices = Invoice.all
+    @invoices = current_user.invoices.all
 
     render json: @invoices
   end
 
   # GET /invoices/1
   def show
-    render json: @invoice
+    render json: Invoice.find(params[:id])
   end
 
   # POST /invoices
   def create
-    @invoice = Invoice.new(invoice_params)
+    @invoice = current_user.invoice.build(invoice_params)
 
     if @invoice.save
       render json: @invoice, status: :created, location: @invoice
