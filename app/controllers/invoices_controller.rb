@@ -3,6 +3,7 @@ class InvoicesController < ProtectedController
 
   # GET /invoices
   def index
+    # only gets the current users invoices on index
     @invoices = current_user.invoices.all
 
     render json: @invoices
@@ -10,6 +11,8 @@ class InvoicesController < ProtectedController
 
   # GET /invoices/1
   def show
+    # Currentlly open read for single invoices.
+    # should figure out a way to privatize it
     render json: Invoice.find(params[:id])
   end
 
