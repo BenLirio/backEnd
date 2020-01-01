@@ -9,10 +9,7 @@ https://benlirio.github.io/latari-inv…
 https://young-island-83955.herokuapp.com/
 
 ## ERD
-[img](https://i.imgur.com/Xl0bm5C.png)
-## Live project links
-FIXME change the project links
-
+[ERD diagram](https://i.imgur.com/Xl0bm5C.png)
 ## Technologies used
 Heroku
 Chrome
