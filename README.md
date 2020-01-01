@@ -1,4 +1,6 @@
-## Front End repo link
+# Invoice application
+This web application helps business owners keep track of their invoices online. It saves the data and makes sure they can edit and delete the invoices that they have already. Users will use this application to Create Read Update and Delete their own private invoices under their own account.
+## Front End Link
 https://github.com/BenLirio/latari-invoice-front
 
 ## ERD
