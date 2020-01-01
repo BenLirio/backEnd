@@ -14,6 +14,8 @@ https://young-island-83955.herokuapp.com/
 FIXME change the project links
 
 ## Technologies used
+Heroku
+Chrome
 Ruby on rails
 Ruby
 Postgress sql
